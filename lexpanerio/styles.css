@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+  color: #111;
+}
+
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+
+header {
+  position: relative;
+  z-index: 9999;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: relative;
+  z-index: 9999;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+body.dark .nav-links a {
+  color: #fff;
+}
+
+body.dark .logo {
+  color: #fff;
+}
+
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.home-text h1,
+.home-text h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.home-text h3 {
+  margin: 15px 0;
+  font-weight: 400;
+  color: #555;
+}
+
+.home-text p {
+  margin-bottom: 25px;
+  line-height: 1.6;
+  color: #666;
+}
+
+body.dark .home-text h3 {
+  color: #ccc;
+}
+
+body.dark .home-text p {
+  color: #aaa;
+}
+
+.home-img {
+  display: flex;
+  justify-content: center;
+}
+
+.home-img img {
+  width: 300px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-icons a:hover {
+  background: #333;
+  transform: translateY(-3px);
+}
+
+.social-icons a:hover img {
+  filter: invert(1);
+}
+
+body.dark .social-icons a {
+  border: 1px solid #fff;
+}
+
+body.dark .social-icons img {
+  filter: invert(1);
+}
+
+body.dark .social-icons a:hover {
+  background: #fff;
+}
+
+body.dark .social-icons a:hover img {
+  filter: invert(0);
+}
+
+.about {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}
+
+.about-container {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+body.dark .about-container {
+  background: #1c1c1c;
+  color: #eee;
+}
+
+section {
+  padding: 80px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.music iframe {
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.films {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.films h2 {
+  margin-bottom: 30px;
+}
+
+.film-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.film-card {
+  text-decoration: none;
+  color: #111;
+  width: 150px;
+  transition: 0.3s;
+}
+
+.film-card img {
+  width: 150px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.film-card img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.film-card p {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+body.dark .film-card {
+  color: #fff;
+}
+
+.theme-toggle {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#theme-toggle {
+  display: none;
+}
+
+.toggle {
+  width: 50px;
+  height: 26px;
+  background: #ccc;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #aaa;
+}
+
+.toggle::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  top: 2.5px;
+  left: 4px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+#theme-toggle:checked + .toggle {
+  background: #111;
+}
+
+#theme-toggle:checked + .toggle::before {
+  transform: translateX(24px);
+}
